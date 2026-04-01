@@ -1,6 +1,6 @@
 # 第 5 章：Claude Code — 配置与工作流
 
-> 文档：[Claude Code](https://code.claude.com/docs/en/overview) | [内存 / CLAUDE.md](https://code.claude.com/docs/en/memory) | [技能](https://code.claude.com/docs/en/skills) | [MCP](https://code.claude.com/docs/en/mcp) | [钩子](https://code.claude.com/docs/en/hooks) | [子代理](https://code.claude.com/docs/en/sub-agents) | [GitHub Actions](https://code.claude.com/docs/en/github-actions) | [无头模式](https://code.claude.com/docs/en/headless)
+> 文档：[Claude Code](https://code.claude.com/docs/en/overview) | [内存 / CLAUDE.md](https://code.claude.com/docs/en/memory) | [技能](https://code.claude.com/docs/en/skills) | [MCP](https://code.claude.com/docs/en/mcp) | [钩子](https://code.claude.com/docs/en/hooks) | [子智能体](https://code.claude.com/docs/en/sub-agents) | [GitHub Actions](https://code.claude.com/docs/en/github-actions) | [无头模式](https://code.claude.com/docs/en/headless)
 
 ## 5.1 CLAUDE.md 层级结构
 
@@ -135,7 +135,7 @@ argument-hint: "要分析的目录路径"
 
 | 参数 | 说明 |
 |---|---|
-| `context: fork` | 在隔离的子代理中运行技能。详细输出不会污染主会话 |
+| `context: fork` | 在隔离的子智能体中运行技能。详细输出不会污染主会话 |
 | `allowed-tools` | 限制可用的工具（安全性——例如，如果未被允许，技能无法删除文件） |
 | `argument-hint` | 在不带参数调用时提示输入参数的提示语 |
 
@@ -171,7 +171,7 @@ argument-hint: "要分析的目录路径"
 2. 用户审批计划
 3. 使用直接执行实施已审批的计划
 
-**探索子代理** — 用于探索代码库的专用子代理：
+**探索子智能体** — 用于探索代码库的专用子智能体：
 - 将详细输出与主上下文隔离
 - 仅返回摘要
 - 防止多阶段任务中上下文窗口耗尽

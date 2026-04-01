@@ -2,7 +2,7 @@
 
 | 技术 | 关键方面 |
 |---|---|
-| **Claude Agent SDK** | AgentDefinition、代理循环、`stop_reason`、钩子（PostToolUse）、通过Task生成子代理、`allowedTools` |
+| **Claude Agent SDK** | AgentDefinition、智能体循环、`stop_reason`、钩子（PostToolUse）、通过Task生成子智能体、`allowedTools` |
 | **模型上下文协议（MCP）** | MCP服务器、工具、资源、`isError`、工具描述、`.mcp.json`、环境变量 |
 | **Claude Code** | CLAUDE.md层次结构、带glob模式的 `.claude/rules/`、`.claude/commands/`、带SKILL.md的 `.claude/skills/`、规划模式、`/compact`、`--resume`、`fork_session` |
 | **Claude Code CLI** | 非交互模式的 `-p` / `--print`、`--output-format json`、`--json-schema` |

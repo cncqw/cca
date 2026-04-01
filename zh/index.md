@@ -22,7 +22,7 @@ hero:
 
 features:
   - icon: 🤖
-    title: 代理架构
+    title: 智能体架构
     details: 掌握多智能体架构与编排（27%）- Agent SDK、子智能体协调、任务分解
     link: /zh/guide/domain-1-agent-architecture-and-orchestration
   - icon: 🔧

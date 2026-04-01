@@ -180,14 +180,14 @@ export default defineConfig({
               ]
             },
             {
-              text: '第二部分：考试领域注释',
+              text: '第二部分：考点知识',
               collapsed: true,
               items: [
-                { text: '领域1：代理架构与编排(27%)', link: '/zh/guide/domain-1-agent-architecture-and-orchestration' },
-                { text: '领域2：工具设计与MCP集成(18%)', link: '/zh/guide/domain-2-tool-design-and-mcp-integration' },
-                { text: '领域3：Claude Code配置与工作流(20%)', link: '/zh/guide/domain-3-claude-code-configuration-and-workflows' },
-                { text: '领域4：提示工程与结构化输出(20%)', link: '/zh/guide/domain-4-prompt-engineering-and-structured-output' },
-                { text: '领域5：上下文管理与可靠性(15%)', link: '/zh/guide/domain-5-context-management-and-reliability' },
+                { text: '考点1：智能体架构与编排(27%)', link: '/zh/guide/domain-1-agent-architecture-and-orchestration' },
+                { text: '考点2：工具设计与MCP集成(18%)', link: '/zh/guide/domain-2-tool-design-and-mcp-integration' },
+                { text: '考点3：Claude Code配置与工作流(20%)', link: '/zh/guide/domain-3-claude-code-configuration-and-workflows' },
+                { text: '考点4：提示工程与结构化输出(20%)', link: '/zh/guide/domain-4-prompt-engineering-and-structured-output' },
+                { text: '考点5：上下文管理与可靠性(15%)', link: '/zh/guide/domain-5-context-management-and-reliability' },
               ]
             },
             {

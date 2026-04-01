@@ -17,7 +17,7 @@
 | **Claude Code — CLAUDE.md 与内存** | https://code.claude.com/docs/en/memory |
 | **Claude Code — 技能（含斜杠命令）** | https://code.claude.com/docs/en/skills |
 | **Claude Code — Hooks** | https://code.claude.com/docs/en/hooks |
-| **Claude Code — 子代理** | https://code.claude.com/docs/en/sub-agents |
+| **Claude Code — 子智能体** | https://code.claude.com/docs/en/sub-agents |
 | **Claude Code — MCP 集成** | https://code.claude.com/docs/en/mcp |
 | **Claude Code — GitHub Actions CI/CD** | https://code.claude.com/docs/en/github-actions |
 | **Claude Code — GitLab CI/CD** | https://code.claude.com/docs/en/gitlab-ci-cd |

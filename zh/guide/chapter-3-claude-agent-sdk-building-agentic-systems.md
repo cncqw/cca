@@ -1,10 +1,10 @@
-# 第 3 章：Claude Agent SDK — 构建代理系统
+# 第 3 章：Claude Agent SDK — 构建智能体系统
 
 > 文档：[Agent SDK](https://platform.claude.com/docs/en/agent-sdk/overview) | [Hooks](https://platform.claude.com/docs/en/agent-sdk/hooks) | [Subagents](https://platform.claude.com/docs/en/agent-sdk/subagents) | [Sessions](https://platform.claude.com/docs/en/agent-sdk/sessions)
 
-## 3.1 什么是代理循环
+## 3.1 什么是智能体循环
 
-代理循环是自主任务执行的核心模式。模型不只是回答——它执行一系列操作：
+智能体循环是自主任务执行的核心模式。模型不只是回答——它执行一系列操作：
 
 ```
 1. 向 Claude 发送带工具的请求
@@ -26,55 +26,55 @@
 
 ## 3.2 `AgentDefinition` 配置
 
-`AgentDefinition` 是 Claude Agent SDK 中的代理配置对象：
+`AgentDefinition` 是 Claude Agent SDK 中的智能体配置对象：
 
 ```python
 agent = AgentDefinition(
     name="customer_support",
     description="处理客户的退货和订单问题",
-    system_prompt="你是一个客户支持代理...",
+    system_prompt="你是一个客户支持智能体...",
     allowed_tools=["get_customer", "lookup_order", "process_refund", "escalate_to_human"],
-    # 对于协调代理：
+    # 对于协调智能体：
     # allowed_tools=["Task", "get_customer", ...]
 )
 ```
 
 **关键参数：**
-- `name` / `description` — 代理的标识和描述
+- `name` / `description` — 智能体的标识和描述
 - `system_prompt` — 带指令的系统提示
 - `allowed_tools` — 允许的工具列表（最小权限原则）
 
-## 3.3 轮辐式：协调代理与子代理
+## 3.3 轮辐式：协调智能体与子智能体
 
-多代理架构通常构建为轮辐式拓扑：
+多智能体架构通常构建为轮辐式拓扑：
 
 ```
-         协调代理
+         协调智能体
         /     |      \
-   子代理1  子代理2  子代理3
+   子智能体1  子智能体2  子智能体3
    （搜索）  （分析）  （综合）
 ```
 
-**协调代理负责：**
+**协调智能体负责：**
 - 将任务分解为子任务
-- 决定需要哪些子代理（动态选择）
-- 将工作委派给子代理
+- 决定需要哪些子智能体（动态选择）
+- 将工作委派给子智能体
 - 聚合和验证结果
 - 处理错误和重试
 - 向用户传达结果
 
-**关键原则：子代理有隔离的上下文。**
-- 子代理**不会**自动继承协调代理的对话历史
-- 所有必需的上下文必须在子代理提示中**显式传递**
-- 子代理不在调用之间共享内存
-- 所有通信通过协调代理流动（用于可观察性和错误控制）
+**关键原则：子智能体有隔离的上下文。**
+- 子智能体**不会**自动继承协调智能体的对话历史
+- 所有必需的上下文必须在子智能体提示中**显式传递**
+- 子智能体不在调用之间共享内存
+- 所有通信通过协调智能体流动（用于可观察性和错误控制）
 
-## 3.4 用于生成子代理的 `Task` 工具
+## 3.4 用于生成子智能体的 `Task` 工具
 
-子代理通过 `Task` 工具生成：
+子智能体通过 `Task` 工具生成：
 
 ```python
-# 协调代理的 allowedTools 必须包含 "Task"
+# 协调智能体的 allowedTools 必须包含 "Task"
 coordinator_agent = AgentDefinition(
     allowed_tools=["Task", "get_customer"]
 )
@@ -83,7 +83,7 @@ coordinator_agent = AgentDefinition(
 **显式上下文传递是强制性的：**
 
 ```
-# 不好：子代理没有上下文
+# 不好：子智能体没有上下文
 Task: "分析文档"
 
 # 好：提示中包含完整上下文
@@ -93,10 +93,10 @@ Task: "分析以下文档。
 输出格式要求：[模式]"
 ```
 
-**并行生成：** 协调代理可以在一个响应中调用多个 `Task`——子代理并行运行：
+**并行生成：** 协调智能体可以在一个响应中调用多个 `Task`——子智能体并行运行：
 
 ```
-# 一个协调代理响应包含：
+# 一个协调智能体响应包含：
 Task 1: "搜索关于 X 的文章"
 Task 2: "分析文档 Y"
 Task 3: "搜索关于 Z 的文章"
@@ -105,7 +105,7 @@ Task 3: "搜索关于 Z 的文章"
 
 ## 3.5 Agent SDK 中的钩子
 
-钩子允许在代理生命周期的特定点进行拦截和转换。
+钩子允许在智能体生命周期的特定点进行拦截和转换。
 
 **PostToolUse** 在工具结果提供给模型之前拦截它：
 

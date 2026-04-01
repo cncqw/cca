@@ -161,7 +161,7 @@ export default defineConfig({
               ]
             },
             {
-              text: '第一部分：理论基础',
+              text: '基础',
               collapsed: false,
               items: [
                 { text: '第1章：Claude API', link: '/zh/guide/chapter-1-claude-api-fundamentals-of-model-interaction' },
@@ -180,14 +180,14 @@ export default defineConfig({
               ]
             },
             {
-              text: '第二部分：考点知识',
+              text: '考点',
               collapsed: true,
               items: [
-                { text: '考点1：智能体架构与编排(27%)', link: '/zh/guide/domain-1-agent-architecture-and-orchestration' },
-                { text: '考点2：工具设计与MCP集成(18%)', link: '/zh/guide/domain-2-tool-design-and-mcp-integration' },
-                { text: '考点3：Claude Code配置与工作流(20%)', link: '/zh/guide/domain-3-claude-code-configuration-and-workflows' },
-                { text: '考点4：提示工程与结构化输出(20%)', link: '/zh/guide/domain-4-prompt-engineering-and-structured-output' },
-                { text: '考点5：上下文管理与可靠性(15%)', link: '/zh/guide/domain-5-context-management-and-reliability' },
+                { text: '智能体架构与编排(27%)', link: '/zh/guide/domain-1-agent-architecture-and-orchestration' },
+                { text: '工具设计与MCP集成(18%)', link: '/zh/guide/domain-2-tool-design-and-mcp-integration' },
+                { text: 'Claude Code配置与工作流(20%)', link: '/zh/guide/domain-3-claude-code-configuration-and-workflows' },
+                { text: '提示工程与结构化输出(20%)', link: '/zh/guide/domain-4-prompt-engineering-and-structured-output' },
+                { text: '上下文管理与可靠性(15%)', link: '/zh/guide/domain-5-context-management-and-reliability' },
               ]
             },
             {

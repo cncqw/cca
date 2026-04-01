@@ -75,11 +75,12 @@ features:
 }
 </style>
 
-## 课程访问
 
-> 目前，认证仅限 Anthropic 合作伙伴网络成员申请，且需使用已验证的合作伙伴公司邮箱进行注册。Claude 合作伙伴网络：https://claude.com/partners
+::: tip 注意
+目前，认证仅限 Anthropic 合作伙伴网络成员申请，且需使用已验证的合作伙伴公司邮箱进行注册。Claude 合作伙伴网络：https://claude.com/partners
 前 5000 名合作公司员工免费。正式版售价为 99 美元。
-如需申请访问官方课程/考试门户网站，请使用此链接：https://anthropic.skilljar.com/claude-certified-architect-foundations-access-request
+如需申请访问官方课程/考试门户网站，请使用此链接：https://anthropic.skilljar.com/claude-certified-architect-foundations-access-request  
+:::
 
 ## 考试概览
 
